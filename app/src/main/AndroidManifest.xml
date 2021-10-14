@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.travelagentdashboard">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TravelAgentDashboard">
+        <activity android:name=".VisaCheck.ListOfCountriesActivity"></activity>
+        <activity android:name=".AirlinePNRActivities.AirArabiaPNRActivity" />
+        <activity android:name=".SelectOption.AirArabiaActivity" />
+        <activity android:name=".AirlinePNRActivities.SaudiAirlinePNRActivity" />
+        <activity android:name=".SelectOption.SaudiAirelineActivity" />
+        <activity android:name=".AirlinePNRActivities.KuwaitPNRActivity" />
+        <activity android:name=".SelectOption.KuwaitActivity" />
+        <activity android:name=".AirlinePNRActivities.OmanAirPNRActivity" />
+        <activity android:name=".SelectOption.OmanAirActivity" />
+        <activity android:name=".AirlinePNRActivities.GulfAirPNRActivity" />
+        <activity android:name=".SelectOption.GulfAirActivity" />
+        <activity android:name=".AirlinePNRActivities.EtihadPNRActivity" />
+        <activity android:name=".SelectOption.EtihadAirlineActivity" />
+        <activity android:name=".AirlinePNRActivities.EmiratesPNRActivity" />
+        <activity android:name=".SelectOption.EmiratesAirlineActivity" />
+        <activity android:name=".AirlinePNRActivities.QatarPNRActivity" />
+        <activity android:name=".SelectOption.QatarAirlineActivity" />
+        <activity android:name=".AirlinePNRActivities.SereneAirPNRActivity" />
+        <activity android:name=".SelectOption.SereneAirlineActivity" />
+        <activity android:name=".SelectOption.AirSialActivity" />
+        <activity android:name=".AirlinePNRActivities.AirSialPNRActivity" />
+        <activity android:name=".AirlinePNRActivities.AirBluePNRActivity" />
+        <activity android:name=".SelectOption.AirBlueActivity" />
+        <activity android:name=".MyBookings.MyBookingActivity" />
+        <activity android:name=".AirlinePNRActivities.PiaPNRActivity" />
+        <activity android:name=".SelectOption.PiaActivity" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.DashboardActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.DarkActionBar" />
+        <activity
+            android:name=".splash.SplashActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
