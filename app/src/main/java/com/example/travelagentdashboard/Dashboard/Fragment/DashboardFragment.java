@@ -11,7 +11,7 @@ import androidx.fragment.app.Fragment;
 
 import com.example.travelagentdashboard.MyBookings.MyBookingActivity;
 import com.example.travelagentdashboard.R;
-import com.example.travelagentdashboard.VisaCheck.ListOfCountriesActivity;
+import com.example.travelagentdashboard.ListOfCountries.ListOfCountriesActivity;
 
 public class DashboardFragment extends Fragment implements View.OnClickListener {
 

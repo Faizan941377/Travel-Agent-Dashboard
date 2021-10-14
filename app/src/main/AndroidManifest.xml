@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAgentDashboard">
-        <activity android:name=".VisaCheck.ListOfCountriesActivity"></activity>
+        <activity android:name=".VisaChecking.UaeVisaCheckingActivity"></activity>
+        <activity android:name=".ListOfCountries.ListOfCountriesActivity" />
         <activity android:name=".AirlinePNRActivities.AirArabiaPNRActivity" />
         <activity android:name=".SelectOption.AirArabiaActivity" />
         <activity android:name=".AirlinePNRActivities.SaudiAirlinePNRActivity" />

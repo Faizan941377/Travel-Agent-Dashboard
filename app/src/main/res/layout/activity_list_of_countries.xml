@@ -63,7 +63,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_fragmentDashboard_myBookings"
+                        android:id="@+id/cv_list_of_countries_UAE_VISA"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         app:cardBackgroundColor="@color/colorOffWhite"
