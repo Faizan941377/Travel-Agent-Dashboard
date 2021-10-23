@@ -4,9 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorWhite"
     android:orientation="vertical"
-    tools:context=".ListOfCountries.ListOfCountriesActivity">
+    tools:context=".VisaCheckList.ListOfCountry.KSAActivity">
 
     <RelativeLayout
         android:id="@+id/action_bar"
@@ -14,8 +13,8 @@
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_facebook">
 
-        <ImageView
-            android:id="@+id/iv_ListOfCountries_back"
+        <ImageButton
+            android:id="@+id/iv_uae_visa_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -26,10 +25,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="List of Countries"
+            android:text="KSA"
             android:textColor="@color/colorWhite"
-            android:textSize="19dp"
+            android:textSize="18dp"
             android:textStyle="bold" />
+
 
     </RelativeLayout>
 
@@ -63,7 +63,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_list_of_countries_UAE_VISA"
+                        android:id="@+id/bt_KSA_muqeemVisaValidity"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         app:cardBackgroundColor="@color/colorOffWhite"
@@ -80,17 +80,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_centerInParent="true"
-                                android:text="UAE"
+                                android:text="Muqeem Visa Validity"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
-
-                            <ImageView
-                                android:layout_width="70dp"
-                                android:layout_height="50dp"
-                                android:background="@drawable/ico_uae"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginRight="10dp"/>
 
 
                         </RelativeLayout>
@@ -116,7 +109,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/bt_ListOfCountry_KSA"
+                        android:id="@+id/bt_KSA_muqeemArrivalRegistration"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         app:cardBackgroundColor="@color/colorOffWhite"
@@ -133,53 +126,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="KSA"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/bt_ListOfCountry_QATAR"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="QATAR VISA"
+                                android:text="Muqeem Arrival Registration"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
@@ -208,7 +155,7 @@
                     android:orientation="horizontal">
 
                     <androidx.cardview.widget.CardView
-                        android:id="@+id/bt_ListOfCountry_Kuwait"
+                        android:id="@+id/bt_KSA_enjazitVisaSite"
                         android:layout_width="match_parent"
                         android:layout_height="80dp"
                         app:cardBackgroundColor="@color/colorOffWhite"
@@ -225,7 +172,7 @@
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="KUWAIT VISA"
+                                android:text="Enjazit Visa Site"
                                 android:textColor="@color/colorBlack"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
@@ -235,97 +182,6 @@
 
                 </LinearLayout>
 
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/bt_ListOfCountry_Oman"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="OMAN VISA"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/bt_ListOfCountry_Bahrain"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="BAHRAIN VISA"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
 
             </LinearLayout>
 

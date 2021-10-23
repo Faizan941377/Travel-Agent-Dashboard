@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".VisaChecking.UaeVisaCheckingActivity">
+    android:orientation="vertical"
+    tools:context=".VisaCheckList.ListOfCountry.UAEVisa.UAE_ICA_ApprovalActivity">
 
     <RelativeLayout
         android:id="@+id/action_bar"
@@ -13,7 +14,7 @@
         android:background="@color/color_facebook">
 
         <ImageButton
-            android:id="@+id/iv_uae_visa_back"
+            android:id="@+id/iv_ICAAPPROVAL_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
@@ -24,7 +25,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="UAE VISA"
+            android:text="ICA Approval Check"
             android:textColor="@color/colorWhite"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -36,6 +37,7 @@
             android:layout_height="6dp"
             style="@style/Widget.AppCompat.ProgressBar.Horizontal"
             android:progressDrawable="@drawable/progressbar_color"/>
+
     </RelativeLayout>
 
     <WebView
@@ -44,5 +46,4 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/action_bar"/>
 
-
-</RelativeLayout>
+</LinearLayout>

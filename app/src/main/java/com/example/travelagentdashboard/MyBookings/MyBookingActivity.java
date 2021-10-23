@@ -21,9 +21,15 @@ import com.example.travelagentdashboard.SelectOption.PiaActivity;
 import com.example.travelagentdashboard.SelectOption.QatarAirlineActivity;
 import com.example.travelagentdashboard.SelectOption.SaudiAirelineActivity;
 import com.example.travelagentdashboard.SelectOption.SereneAirlineActivity;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 public class MyBookingActivity extends AppCompatActivity implements View.OnClickListener {
 
+    private AdView mAdView;
     ImageView backIV;
     CardView piaBT;
     CardView airBlueBT;
@@ -70,6 +76,16 @@ public class MyBookingActivity extends AppCompatActivity implements View.OnClick
         kuwaitBT.setOnClickListener(this);
         saudiBT.setOnClickListener(this);
         airArabiaBT.setOnClickListener(this);
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
     }
 
     @Override

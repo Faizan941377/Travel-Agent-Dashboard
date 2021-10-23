@@ -4,4 +4,9 @@
     <string name="open">Open</string>
     <string name="close">Close</string>
 
+    <string name="ad_attribution">Ad</string>
+    <string name="Pia_Native_Ad">ca-app-pub-1712584545280658/1302026773</string>
+    <string name="dashboard_banner_Ad">ca-app-pub-1712584545280658/5784536576</string>
+    <string name="myBooking_banner_Ad">ca-app-pub-1712584545280658/8229563050</string>
+
 </resources>

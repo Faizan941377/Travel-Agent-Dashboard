@@ -3,6 +3,8 @@
     package="com.example.travelagentdashboard">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -11,7 +13,32 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAgentDashboard">
-        <activity android:name=".VisaChecking.UaeVisaCheckingActivity"></activity>
+        <activity android:name=".VisaCheckList.ListOfCountry.QatarVisa.UAE_GDFRA_ApprovalActivity"></activity>
+        <activity android:name=".VisaCheckList.ListOfCountry.UAEVisa.UAE_ICA_ApprovalActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.QatarVisa.QatarVisaActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.KSA.EnjazitVisaSiteActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.KSA.MuqeemArrivalRegistrationActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.KSA.KsaMuqeemVisaValidityActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.BahrainVisa.BahrainActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.OmanVisa.OmanActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.KuwaitVisa.KuwaitActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.KSAActivity" />
+        <activity android:name=".VisaCheckList.ListOfCountry.UAEVisa.UaeVisaValidityActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1712584545280658~7594304083" />
+        <!--
+&lt;!&ndash; //sample app id&ndash;&gt;
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        -->
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
+
+        <activity android:name=".VisaCheckList.UAEActivity" />
         <activity android:name=".ListOfCountries.ListOfCountriesActivity" />
         <activity android:name=".AirlinePNRActivities.AirArabiaPNRActivity" />
         <activity android:name=".SelectOption.AirArabiaActivity" />
