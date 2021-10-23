@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -26,14 +27,21 @@ import com.bumptech.glide.load.engine.GlideException;
 import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.target.Target;
 import com.example.travelagentdashboard.Dashboard.Fragment.DashboardFragment;
+import com.example.travelagentdashboard.ListOfCountries.ListOfCountriesActivity;
+import com.example.travelagentdashboard.MyBookings.MyBookingActivity;
 import com.example.travelagentdashboard.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.navigation.NavigationView;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
-public class DashboardActivity extends AppCompatActivity {
+public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
-    private DrawerLayout drawerLayout;
+   /* private DrawerLayout drawerLayout;
     private ActionBarDrawerToggle actionBarDrawerToggle;
     NavigationView navigationView;
     TextView profileNameTV;
@@ -41,7 +49,11 @@ public class DashboardActivity extends AppCompatActivity {
     TextView profileEmailTV;
     CircleImageView profileImageIV;
     ProgressBar profileProgressBar;
-    ProgressDialog progressDialog;
+    ProgressDialog progressDialog;*/
+
+    private AdView mAdView;
+    CardView myBookingBT;
+    CardView visaCheckBT;
 
 
     @Override
@@ -49,7 +61,7 @@ public class DashboardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-
+/*
         if (savedInstanceState == null) {
             DashboardFragment f1 = new DashboardFragment();
             FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
@@ -121,12 +133,12 @@ public class DashboardActivity extends AppCompatActivity {
     }
 
 
-    /*private void logout() {
+    *//*private void logout() {
         SharePrefManager.getInstance(this).clear();
         Intent intent = new Intent(this, LoginActivity.class);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
         startActivity(intent);
-    }*/
+    }*//*
 
 
     private void setDrawerContent(NavigationView navigationView) {
@@ -137,6 +149,40 @@ public class DashboardActivity extends AppCompatActivity {
                 return false;
             }
         });
+    }*/
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
+        myBookingBT = findViewById(R.id.cv_fragmentDashboard_myBookings);
+        visaCheckBT = findViewById(R.id.cv_fragmentDashboard_visaCheck);
+
+
+        visaCheckBT.setOnClickListener(this);
+        myBookingBT.setOnClickListener(this);
+        return;
     }
 
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.cv_fragmentDashboard_myBookings:
+                Intent intent = new Intent(this, MyBookingActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.cv_fragmentDashboard_visaCheck:
+                Intent intent1 = new Intent(this, ListOfCountriesActivity.class);
+                startActivity(intent1);
+                break;
+        }
+    }
 }
