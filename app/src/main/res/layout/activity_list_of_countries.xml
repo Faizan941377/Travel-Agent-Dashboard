@@ -85,13 +85,6 @@
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
 
-                            <ImageView
-                                android:layout_width="70dp"
-                                android:layout_height="50dp"
-                                android:background="@drawable/ico_uae"
-                                android:layout_alignParentEnd="true"
-                                android:layout_marginRight="10dp"/>
-
 
                         </RelativeLayout>
                     </androidx.cardview.widget.CardView>

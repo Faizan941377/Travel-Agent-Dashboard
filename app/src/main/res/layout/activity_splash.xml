@@ -9,25 +9,45 @@
     tools:context=".splash.SplashActivity">
 
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@mipmap/ic_launcher_round"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"/>
+
 
     <TextView
+        android:id="@+id/tv_travelAgent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="30dp"
         android:textColor="@color/white"
         android:layout_marginTop="15dp"
-        android:text="Travel Agent Dashboard"
+        android:text="Travel Agent"
         android:layout_gravity="center"
         android:layout_centerInParent="true"
         android:textStyle="bold"
        android:layout_centerHorizontal="true"/>
+
+    <TextView
+        android:id="@+id/tv_dashboard"
+        android:layout_below="@+id/tv_travelAgent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="@color/white"
+        android:text="Dashboard"
+        android:layout_gravity="center"
+        android:layout_centerInParent="true"
+        android:textStyle="bold"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16dp"
         android:textColor="@color/white"
         android:layout_marginTop="10dp"
-        android:text="Developed by NEXTSUNtech.com"
+        android:text="Developed by NEXTSUNTech.com"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginBottom="36dp"
