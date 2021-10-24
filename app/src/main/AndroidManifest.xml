@@ -13,28 +13,41 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAgentDashboard">
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.QatarVisa.UAE_GDFRA_ApprovalActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"></activity>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.UAEVisa.UAE_ICA_ApprovalActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.QatarVisa.QatarVisaActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.KSA.EnjazitVisaSiteActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.KSA.MuqeemArrivalRegistrationActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.KSA.KsaMuqeemVisaValidityActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.BahrainVisa.BahrainActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.OmanVisa.OmanActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.KuwaitVisa.KuwaitActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.KSAActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.UAEVisa.UaeVisaValidityActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
+        <activity android:name=".Users.RegisterActivity"></activity>
+        <activity android:name=".Users.LoginActivity" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.QatarVisa.UAE_GDFRA_ApprovalActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.UAEVisa.UAE_ICA_ApprovalActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.QatarVisa.QatarVisaActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.KSA.EnjazitVisaSiteActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.KSA.MuqeemArrivalRegistrationActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.KSA.KsaMuqeemVisaValidityActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.BahrainVisa.BahrainActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.OmanVisa.OmanActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.KuwaitVisa.KuwaitActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.KSAActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".VisaCheckList.ListOfCountriesVisas.UAEVisa.UaeVisaValidityActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -49,68 +62,95 @@
             android:name="com.google.android.gms.ads.AD_MANAGER_APP"
             android:value="true" />
 
-        <activity android:name="com.nextSunTech.travelagentdashboard.VisaCheckList.UAEActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.ListOfCountries.ListOfCountriesActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.AirArabiaPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.AirArabiaActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.SaudiAirlinePNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.SaudiAirelineActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.KuwaitPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.KuwaitActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.OmanAirPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.OmanAirActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.GulfAirPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.GulfAirActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.EtihadPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.EtihadAirlineActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.EmiratesPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.EmiratesAirlineActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.QatarPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.QatarAirlineActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.SereneAirPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.SereneAirlineActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.AirSialActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.AirSialPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.AirBluePNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.AirBlueActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.MyBookings.MyBookingActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.AirlinePNRActivities.PiaPNRActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
-        <activity android:name="com.nextSunTech.travelagentdashboard.SelectOption.PiaActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"/>
         <activity
-            android:name="com.nextSunTech.travelagentdashboard.MainActivity"
+            android:name=".VisaCheckList.UAEActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name="com.nextSunTech.travelagentdashboard.Dashboard.DashboardActivity"
+            android:name=".ListOfCountries.ListOfCountriesActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name="com.nextSunTech.travelagentdashboard.splash.SplashActivity"
+            android:name=".AirlinePNRActivities.AirArabiaPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.AirArabiaActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.SaudiAirlinePNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.SaudiAirelineActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.KuwaitPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.KuwaitActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.OmanAirPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.OmanAirActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.GulfAirPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.GulfAirActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.EtihadPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.EtihadAirlineActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.EmiratesPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.EmiratesAirlineActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.QatarPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.QatarAirlineActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.SereneAirPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.SereneAirlineActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.AirSialActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.AirSialPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.AirBluePNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.AirBlueActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".MyBookings.MyBookingActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".AirlinePNRActivities.PiaPNRActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".SelectOption.PiaActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.DashboardActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".splash.SplashActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

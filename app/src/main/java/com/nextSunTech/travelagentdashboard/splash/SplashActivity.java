@@ -8,6 +8,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.nextSunTech.travelagentdashboard.Dashboard.DashboardActivity;
 import com.nextSunTech.travelagentdashboard.R;
+import com.nextSunTech.travelagentdashboard.Users.LoginActivity;
+import com.nextSunTech.travelagentdashboard.Users.RegisterActivity;
 
 
 public class SplashActivity extends AppCompatActivity {
@@ -24,7 +26,7 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(com.nextSunTech.travelagentdashboard.splash.SplashActivity.this, DashboardActivity.class);
+                Intent intent = new Intent(com.nextSunTech.travelagentdashboard.splash.SplashActivity.this, LoginActivity.class);
                 startActivity(intent);
                 finish();
             }

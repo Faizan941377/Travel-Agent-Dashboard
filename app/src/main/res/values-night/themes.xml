@@ -15,4 +15,8 @@
     </style>
 
 
+    <style name="EditTextOutline" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="colorAccent">#fff</item>
+    </style>
+
 </resources>
