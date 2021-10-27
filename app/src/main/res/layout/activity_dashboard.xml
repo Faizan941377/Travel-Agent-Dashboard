@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,176 +7,282 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
+
     <RelativeLayout
         android:id="@+id/action_bar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/color_facebook">
 
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/ico_profile" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
             android:text="Travel Agent Dashboard"
             android:textColor="@color/colorWhite"
-            android:textSize="18dp"
+            android:textSize="20dp"
             android:textStyle="bold" />
-
-        <ProgressBar
-            android:id="@+id/progressBar"
-            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="6dp"
-            android:layout_alignParentBottom="true"
-            android:progressDrawable="@drawable/progressbar_color" />
 
     </RelativeLayout>
 
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/action_bar"
+        android:background="@drawable/background"
+        android:backgroundTint="@color/color_facebook" />
 
-    <ScrollView
+
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/action_bar">
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/action_bar"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:id="@+id/LL_main"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/action_bar"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="21dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_fragmentDashboard_myBookings"
-                        android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
-
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:text="MY BOOKINGS"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-            </LinearLayout>
+            android:layout_height="match_parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="50dp"
+                android:orientation="vertical">
+
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="16dp">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_fragmentDashboard_visaCheck"
+
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
 
-                        <RelativeLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_Dashboard_myBookings"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:cardBackgroundColor="@color/color_facebook"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <TextView
+                            <RelativeLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="VISA CHECK"
-                                android:textColor="@color/colorBlack"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
+                                android:layout_gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:id="@+id/ico_dashboard_humanResource"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/ico_bookings"
+                                    android:backgroundTint="@color/colorWhite" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ico_dashboard_humanResource"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="Bookings"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_Dashboard_visaCheck"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:cardBackgroundColor="@color/color_facebook"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/ico_dashboard_act_rules"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/ico_visa"
+                                    android:backgroundTint="@color/colorWhite" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ico_dashboard_act_rules"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:text="Visa Check"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/bt_dashboard_protectedAreas"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:cardBackgroundColor="@color/color_facebook"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/ico_dashboard_protected_areas"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/ico_gamca_medical_token"
+                                    android:backgroundTint="@color/colorWhite" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ico_dashboard_protected_areas"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="Gamca Medical Token"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/bt_dashboard_peasantry"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:cardBackgroundColor="@color/color_facebook"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/ico_dashboard_Peasantry"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/ico_vaccine_certificate"
+                                    android:backgroundTint="@color/colorWhite" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ico_dashboard_Peasantry"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="Covid Vaccine Certificate Nadra"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
-            <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
-                android:id="@+id/adView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:layout_gravity="center"
-                android:layout_marginTop="16dp"
-                ads:adSize="BANNER"
-                ads:adUnitId="@string/dashboard_banner_Ad"></com.google.android.gms.ads.AdView>
-            <!--<androidx.drawerlayout.widget.DrawerLayout
-                android:id="@+id/dl_dashboard_drawer"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+        </ScrollView>
 
-                <FrameLayout
-                    android:id="@+id/frame_Layout"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
-                <com.google.android.material.navigation.NavigationView
-                    android:id="@+id/navigationDrawer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="start"
-                    android:background="@color/colorWhite"
-                    android:fitsSystemWindows="true"
-                    app:headerLayout="@layout/dashboard_nav_header"
-                    app:itemIconTint="@color/colorLightGreen"
-                    app:itemTextColor="@color/colorBlack"
-                    app:menu="@menu/drawer_menu" />
+    </androidx.cardview.widget.CardView>
 
 
-            </androidx.drawerlayout.widget.DrawerLayout>-->
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/dashboard_banner_Ad" />
 
-
-        </LinearLayout>
-
-    </ScrollView>
-
-
-</LinearLayout>
+</RelativeLayout>

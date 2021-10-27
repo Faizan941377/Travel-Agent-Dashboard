@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.LoadAdError;
 import com.nextSunTech.travelagentdashboard.R;
 import com.nextSunTech.travelagentdashboard.SelectOption.AirArabiaActivity;
 import com.nextSunTech.travelagentdashboard.SelectOption.AirBlueActivity;
@@ -30,6 +32,7 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class MyBookingActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AdView mAdView;
+    private AdView mAdView2;
     ImageView backIV;
     CardView piaBT;
     CardView airBlueBT;
@@ -77,15 +80,8 @@ public class MyBookingActivity extends AppCompatActivity implements View.OnClick
         saudiBT.setOnClickListener(this);
         airArabiaBT.setOnClickListener(this);
 
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-            }
-        });
 
-        mAdView = findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        BannerAdvertisements();
     }
 
     @Override
@@ -155,5 +151,52 @@ public class MyBookingActivity extends AppCompatActivity implements View.OnClick
                 finish();
                 break;
         }
+    }
+
+
+    private void BannerAdvertisements() {
+
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                super.onAdLoaded();
+            }
+
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+                super.onAdFailedToLoad(adError);
+                mAdView.loadAd(adRequest);
+            }
+
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+                super.onAdOpened();
+            }
+
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
+
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
     }
 }

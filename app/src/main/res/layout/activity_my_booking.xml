@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -33,551 +33,571 @@
 
     </RelativeLayout>
 
-    <com.google.android.gms.ads.AdView
-        xmlns:ads="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_gravity="center"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/myBooking_banner_Ad">
-    </com.google.android.gms.ads.AdView>
 
+    <ImageView
+        android:id="@+id/iv_background"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@+id/action_bar"
+        android:background="@drawable/background"
+        android:backgroundTint="@color/color_facebook" />
 
-    <ScrollView
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/action_bar">
+        android:layout_above="@+id/adView"
+        android:layout_below="@+id/action_bar"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="4dp"
+        app:cardUseCompatPadding="true">
 
-        <LinearLayout
+
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:layout_below="@+id/action_bar">
 
             <LinearLayout
-                android:id="@+id/LL_main"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/action_bar"
-                android:layout_marginLeft="20dp"
-                android:layout_marginTop="21dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
+                android:layout_centerInParent="true"
+                android:orientation="vertical">
 
                 <LinearLayout
+                    android:id="@+id/LL_main"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_below="@+id/action_bar"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="21dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_myBooking_pia"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_myBooking_pia"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="wrap_content"
+                            <RelativeLayout
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:background="@drawable/ico_pia" />
+                                android:layout_gravity="center"
+                                android:gravity="center">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/ico_pia" />
 
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
 
                 </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_myBooking_airBlue"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_myBooking_airBlue"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_airblue" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_airblue" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_myBooking_airsial"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_myBooking_airsial"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_airsial" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_airsial" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_myBooking_sereneAir"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_myBooking_sereneAir"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_sereneair" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_sereneair" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_qatarAirline"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_qatarAirline"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_qatar" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_qatar" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_emiratesAirline"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_emiratesAirline"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="70dp"
-                                android:background="@drawable/ico_emarates" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="70dp"
+                                    android:background="@drawable/ico_emarates" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_etihadAirline"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_etihadAirline"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_etihad" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_etihad" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_gulfAir"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_gulfAir"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_gulfair" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_gulfair" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_omanAir"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_omanAir"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_omanair" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_omanair" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_kuwait"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_kuwait"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_kuwait" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_kuwait" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_saudi"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_saudi"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_sudia" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_sudia" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
 
                 </LinearLayout>
-
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:gravity="center">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:gravity="center">
 
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/cv_airArabia"
+                    <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="80dp"
-                        app:cardBackgroundColor="@color/colorOffWhite"
-                        app:cardCornerRadius="10dp"
-                        app:cardElevation="4dp"
-                        app:cardUseCompatPadding="true">
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="horizontal">
 
-                        <RelativeLayout
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/cv_airArabia"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_gravity="center"
-                            android:gravity="center">
+                            android:layout_height="80dp"
+                            app:cardBackgroundColor="@color/colorOffWhite"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
 
-                            <ImageView
-                                android:layout_width="170dp"
-                                android:layout_height="80dp"
-                                android:background="@drawable/ico_airarabia" />
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center">
 
-                        </RelativeLayout>
-                    </androidx.cardview.widget.CardView>
+                                <ImageView
+                                    android:layout_width="170dp"
+                                    android:layout_height="80dp"
+                                    android:background="@drawable/ico_airarabia" />
+
+                            </RelativeLayout>
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
 
-        </LinearLayout>
+        </ScrollView>
 
-    </ScrollView>
+    </androidx.cardview.widget.CardView>
 
-</LinearLayout>
+
+    <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="5dp"
+        android:layout_gravity="center"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/myBooking_banner_Ad"/>
+
+</RelativeLayout>

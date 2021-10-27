@@ -7,6 +7,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.LoadAdError;
 import com.nextSunTech.travelagentdashboard.ListOfCountries.ListOfCountriesActivity;
 import com.nextSunTech.travelagentdashboard.MyBookings.MyBookingActivity;
 import com.nextSunTech.travelagentdashboard.R;
@@ -18,16 +20,6 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
-   /* private DrawerLayout drawerLayout;
-    private ActionBarDrawerToggle actionBarDrawerToggle;
-    NavigationView navigationView;
-    TextView profileNameTV;
-    TextView profileContactTV;
-    TextView profileEmailTV;
-    CircleImageView profileImageIV;
-    ProgressBar profileProgressBar;
-    ProgressDialog progressDialog;*/
-
     private AdView mAdView;
     CardView myBookingBT;
     CardView visaCheckBT;
@@ -38,95 +30,35 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dashboard);
 
-/*
-        if (savedInstanceState == null) {
-            DashboardFragment f1 = new DashboardFragment();
-            FragmentTransaction fragmentTransaction = getSupportFragmentManager().beginTransaction();
-            fragmentTransaction.add(R.id.frame_Layout, f1);
-            fragmentTransaction.commit();
 
-        }
+        myBookingBT = findViewById(R.id.cv_Dashboard_myBookings);
+        visaCheckBT = findViewById(R.id.cv_Dashboard_visaCheck);
 
 
-        drawerLayout = findViewById(R.id.dl_dashboard_drawer);
-        navigationView = findViewById(R.id.navigationDrawer);
+        visaCheckBT.setOnClickListener(this);
+        myBookingBT.setOnClickListener(this);
 
-        // for accessing the headerNav
-        View headerView = navigationView.getHeaderView(0);
-        profileNameTV = headerView.findViewById(R.id.tv_profile_name);
-        profileContactTV = headerView.findViewById(R.id.tv_profile_contact);
-        profileEmailTV = headerView.findViewById(R.id.tv_profile_email);
-        profileImageIV = headerView.findViewById(R.id.iv_dashboard_profile);
-        profileProgressBar = headerView.findViewById(R.id.pb_profile_image);
-
-
-        actionBarDrawerToggle = new ActionBarDrawerToggle(this, drawerLayout, R.string.open, R.string.close);
-        drawerLayout.addDrawerListener(actionBarDrawerToggle);
-        actionBarDrawerToggle.syncState();
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-
-        //Here i will change the action bar color pragmatically
-
-        getSupportActionBar().setBackgroundDrawable(new ColorDrawable(Color.parseColor("#3b5998")));
-        setDrawerContent(navigationView);
-
-        // progress Dialog
-        progressDialog = new ProgressDialog(this);
-
-
+        BannerAdsDashboard();
     }
+
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (actionBarDrawerToggle.onOptionsItemSelected(item)) {
-            return true;
-        }
-        return super.onOptionsItemSelected(item);
-    }
-
-    public void selectItemDrawer(MenuItem menuItem) {
-        Fragment fragment = null;
-
-        Class fragmentClass;
-
-        switch (menuItem.getItemId()) {
-            case R.id.menu_dashboard:
-                fragmentClass = DashboardFragment.class;
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.cv_Dashboard_myBookings:
+                Intent intent = new Intent(this, MyBookingActivity.class);
+                startActivity(intent);
                 break;
-            default:
-                fragmentClass = DashboardFragment.class;
-        }
-        try {
-            fragment = (Fragment) fragmentClass.newInstance();
-            FragmentManager fragmentManager = getSupportFragmentManager();
-            fragmentManager.beginTransaction().replace(R.id.frame_Layout, fragment).commit();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        menuItem.setChecked(true);
-        setTitle(menuItem.getTitle());
-        drawerLayout.closeDrawers();
 
+            case R.id.cv_Dashboard_visaCheck:
+                Intent intent1 = new Intent(this, ListOfCountriesActivity.class);
+                startActivity(intent1);
+                break;
+        }
     }
 
-
-    *//*private void logout() {
-        SharePrefManager.getInstance(this).clear();
-        Intent intent = new Intent(this, LoginActivity.class);
-        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-        startActivity(intent);
-    }*//*
-
-
-    private void setDrawerContent(NavigationView navigationView) {
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                selectItemDrawer(item);
-                return false;
-            }
-        });
-    }*/
+    // Admob ads method
+    private void BannerAdsDashboard() {
 
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -137,29 +69,36 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        mAdView.setAdListener(new AdListener() {
+            @Override
+            public void onAdLoaded() {
+                // Code to be executed when an ad finishes loading.
+                super.onAdLoaded();
+            }
 
+            @Override
+            public void onAdFailedToLoad(LoadAdError adError) {
+                // Code to be executed when an ad request fails.
+                super.onAdFailedToLoad(adError);
+            }
 
-        myBookingBT = findViewById(R.id.cv_fragmentDashboard_myBookings);
-        visaCheckBT = findViewById(R.id.cv_fragmentDashboard_visaCheck);
+            @Override
+            public void onAdOpened() {
+                // Code to be executed when an ad opens an overlay that
+                // covers the screen.
+            }
 
+            @Override
+            public void onAdClicked() {
+                // Code to be executed when the user clicks on an ad.
+            }
 
-        visaCheckBT.setOnClickListener(this);
-        myBookingBT.setOnClickListener(this);
-        return;
-    }
+            @Override
+            public void onAdClosed() {
+                // Code to be executed when the user is about to return
+                // to the app after tapping on an ad.
+            }
+        });
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.cv_fragmentDashboard_myBookings:
-                Intent intent = new Intent(this, MyBookingActivity.class);
-                startActivity(intent);
-                break;
-
-            case R.id.cv_fragmentDashboard_visaCheck:
-                Intent intent1 = new Intent(this, ListOfCountriesActivity.class);
-                startActivity(intent1);
-                break;
-        }
     }
 }
