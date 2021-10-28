@@ -49,6 +49,7 @@ public class PiaActivity extends AppCompatActivity implements View.OnClickListen
         continueBT = findViewById(R.id.bt_selectOption);
         backBT = findViewById(R.id.iv_pia_back);
 
+        backBT.setOnClickListener(this);
         continueBT.setOnClickListener(this);
         
         refreshAd();

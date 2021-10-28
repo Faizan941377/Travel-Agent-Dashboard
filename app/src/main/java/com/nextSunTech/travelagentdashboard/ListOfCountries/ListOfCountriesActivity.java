@@ -9,12 +9,12 @@ import android.view.View;
 import android.widget.ImageView;
 
 import com.nextSunTech.travelagentdashboard.R;
-import com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.BahrainVisa.BahrainActivity;
-import com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.KSAActivity;
-import com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.KuwaitVisa.KuwaitActivity;
-import com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.OmanVisa.OmanActivity;
-import com.nextSunTech.travelagentdashboard.VisaCheckList.ListOfCountriesVisas.QatarVisa.QatarVisaActivity;
-import com.nextSunTech.travelagentdashboard.VisaCheckList.UAEActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.VisaCheckList.ListOfCountriesVisas.BahrainVisa.BahrainActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.VisaCheckList.ListOfCountriesVisas.KSAActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.VisaCheckList.ListOfCountriesVisas.KuwaitVisa.KuwaitActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.VisaCheckList.ListOfCountriesVisas.OmanVisa.OmanActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.VisaCheckList.ListOfCountriesVisas.QatarVisa.QatarVisaActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.VisaCheckList.UAEActivity;
 
 public class ListOfCountriesActivity extends AppCompatActivity implements View.OnClickListener {
 

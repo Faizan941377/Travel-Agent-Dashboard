@@ -9,8 +9,12 @@ import android.view.View;
 
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.LoadAdError;
+import com.nextSunTech.travelagentdashboard.Dashboard.AgentID.AgentIDOfAirlinesActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.GamcaMedicalToken.GamcaMedicalTokenActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.NADRACovidVaccineCertification.NadraCovidVaccineCertificateActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.SabreRedWeb.SabreRedWebActivity;
 import com.nextSunTech.travelagentdashboard.ListOfCountries.ListOfCountriesActivity;
-import com.nextSunTech.travelagentdashboard.MyBookings.MyBookingActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.MyBookings.MyBookingActivity;
 import com.nextSunTech.travelagentdashboard.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -23,6 +27,10 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     private AdView mAdView;
     CardView myBookingBT;
     CardView visaCheckBT;
+    CardView gamcaMedicalTokenBT;
+    CardView agentIDT;
+    CardView nadraCovidVaccineCertificateBT;
+    CardView sabreRedWebBT;
 
 
     @Override
@@ -33,10 +41,18 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
 
         myBookingBT = findViewById(R.id.cv_Dashboard_myBookings);
         visaCheckBT = findViewById(R.id.cv_Dashboard_visaCheck);
+        agentIDT = findViewById(R.id.bt_dashboard_AgentID);
+        gamcaMedicalTokenBT = findViewById(R.id.bt_dashboard_gamcaMedicalToken);
+        nadraCovidVaccineCertificateBT = findViewById(R.id.bt_dashboard_NadraCovidVaccineCertificate);
+        sabreRedWebBT = findViewById(R.id.bt_dashboard_sabreRedWeb);
 
 
         visaCheckBT.setOnClickListener(this);
         myBookingBT.setOnClickListener(this);
+        agentIDT.setOnClickListener(this);
+        gamcaMedicalTokenBT.setOnClickListener(this);
+        nadraCovidVaccineCertificateBT.setOnClickListener(this);
+        sabreRedWebBT.setOnClickListener(this);
 
         BannerAdsDashboard();
     }
@@ -45,6 +61,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
+
             case R.id.cv_Dashboard_myBookings:
                 Intent intent = new Intent(this, MyBookingActivity.class);
                 startActivity(intent);
@@ -53,6 +70,26 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             case R.id.cv_Dashboard_visaCheck:
                 Intent intent1 = new Intent(this, ListOfCountriesActivity.class);
                 startActivity(intent1);
+                break;
+
+            case R.id.bt_dashboard_AgentID:
+                Intent intent2 = new Intent(this, AgentIDOfAirlinesActivity.class);
+                startActivity(intent2);
+                break;
+
+            case R.id.bt_dashboard_gamcaMedicalToken:
+                Intent intent3 = new Intent(this, GamcaMedicalTokenActivity.class);
+                startActivity(intent3);
+                break;
+
+            case R.id.bt_dashboard_NadraCovidVaccineCertificate:
+                Intent intent4 = new Intent(this, NadraCovidVaccineCertificateActivity.class);
+                startActivity(intent4);
+                break;
+
+            case R.id.bt_dashboard_sabreRedWeb:
+                Intent intent5 = new Intent(this, SabreRedWebActivity.class);
+                startActivity(intent5);
                 break;
         }
     }
@@ -86,6 +123,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             public void onAdOpened() {
                 // Code to be executed when an ad opens an overlay that
                 // covers the screen.
+                super.onAdOpened();
             }
 
             @Override

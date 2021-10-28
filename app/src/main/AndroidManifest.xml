@@ -13,57 +13,57 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAgentDashboard">
-        <activity android:name=".Users.RegisterActivity"></activity>
-        <activity android:name=".Users.LoginActivity" />
+        <activity android:name=".Dashboard.AirSialAgentID.AirSialAgentIDActivity"></activity>
+        <activity android:name=".Dashboard.SerenAirAgentID.SerenAirAgentIDActivity" />
+        <activity android:name=".Dashboard.AgentID.AirBlueAgentID.AirBlueAgentIDActivity" />
+        <activity android:name=".Dashboard.AgentID.PIAAgentID.PIAAgentIDActivity" />
+        <activity android:name=".Dashboard.NADRACovidVaccineCertification.NadraCovidVaccineCertificateActivity" />
+        <activity android:name=".Dashboard.GamcaMedicalToken.GamcaMedicalTokenActivity" />
+        <activity android:name=".Dashboard.SabreRedWeb.SabreRedWebActivity" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.QatarVisa.UAE_GDFRA_ApprovalActivity"
+            android:name=".Dashboard.AgentID.AgentIDOfAirlinesActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.UAEVisa.UAE_ICA_ApprovalActivity"
+            android:name=".Users.RegisterActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.QatarVisa.QatarVisaActivity"
+            android:name=".Users.LoginActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.KSA.EnjazitVisaSiteActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.QatarVisa.UAE_GDFRA_ApprovalActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.KSA.MuqeemArrivalRegistrationActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.UAEVisa.UAE_ICA_ApprovalActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.KSA.KsaMuqeemVisaValidityActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.QatarVisa.QatarVisaActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.BahrainVisa.BahrainActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.KSA.EnjazitVisaSiteActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.OmanVisa.OmanActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.KSA.MuqeemArrivalRegistrationActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.KuwaitVisa.KuwaitActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.KSA.KsaMuqeemVisaValidityActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.KSAActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.BahrainVisa.BahrainActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".VisaCheckList.ListOfCountriesVisas.UAEVisa.UaeVisaValidityActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.OmanVisa.OmanActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
-
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1712584545280658~7594304083" />
-        <!--
-&lt;!&ndash; //sample app id&ndash;&gt;
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713" />
-        -->
-        <meta-data
-            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
-            android:value="true" />
-
         <activity
-            android:name=".VisaCheckList.UAEActivity"
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.KuwaitVisa.KuwaitActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.KSAActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.VisaCheckList.ListOfCountriesVisas.UAEVisa.UaeVisaValidityActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.VisaCheckList.UAEActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".ListOfCountries.ListOfCountriesActivity"
@@ -135,7 +135,7 @@
             android:name=".SelectOption.AirBlueActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
-            android:name=".MyBookings.MyBookingActivity"
+            android:name=".Dashboard.MyBookings.MyBookingActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".AirlinePNRActivities.PiaPNRActivity"
@@ -158,6 +158,19 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1712584545280658~7594304083" />
+        <!--
+&lt;!&ndash; //sample app id&ndash;&gt;
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3940256099942544~3347511713" />
+        -->
+        <meta-data
+            android:name="com.google.android.gms.ads.AD_MANAGER_APP"
+            android:value="true" />
     </application>
 
 </manifest>
