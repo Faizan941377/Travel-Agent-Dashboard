@@ -13,8 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TravelAgentDashboard">
-        <activity android:name=".Dashboard.AirSialAgentID.AirSialAgentIDActivity"></activity>
-        <activity android:name=".Dashboard.SerenAirAgentID.SerenAirAgentIDActivity" />
+        <activity android:name=".Dashboard.AgentID.AirSialAgentID.AirSialAgentIDActivity"></activity>
+        <activity android:name=".Dashboard.AgentID.SerenAirAgentID.SerenAirAgentIDActivity" />
         <activity android:name=".Dashboard.AgentID.AirBlueAgentID.AirBlueAgentIDActivity" />
         <activity android:name=".Dashboard.AgentID.PIAAgentID.PIAAgentIDActivity" />
         <activity android:name=".Dashboard.NADRACovidVaccineCertification.NadraCovidVaccineCertificateActivity" />

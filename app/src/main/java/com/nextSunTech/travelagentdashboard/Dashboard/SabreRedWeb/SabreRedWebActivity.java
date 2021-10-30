@@ -33,7 +33,7 @@ public class SabreRedWebActivity extends AppCompatActivity implements View.OnCli
         progressBar = findViewById(R.id.progressBar);
         progressBar.setMax(100);
         myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("https://webcheckin.airarabia.com/accelaero/en/index.html#/");
+        myWebView.loadUrl("https://accounts.havail.sabre.com/login/srw?goto=https%3A%2F%2Fsrw.sabre.com%2Flogin%2Flogin.html%3Fts%3D498704&force=true");
         WebSettings webSettings=myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         progressBar.setProgress(0);

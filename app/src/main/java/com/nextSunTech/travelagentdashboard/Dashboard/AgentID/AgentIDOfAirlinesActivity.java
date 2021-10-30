@@ -1,7 +1,9 @@
 package com.nextSunTech.travelagentdashboard.Dashboard.AgentID;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,10 @@ import com.google.android.gms.ads.nativead.MediaView;
 import com.google.android.gms.ads.nativead.NativeAd;
 import com.google.android.gms.ads.nativead.NativeAdOptions;
 import com.google.android.gms.ads.nativead.NativeAdView;
+import com.nextSunTech.travelagentdashboard.Dashboard.AgentID.AirBlueAgentID.AirBlueAgentIDActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.AgentID.AirSialAgentID.AirSialAgentIDActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.AgentID.PIAAgentID.PIAAgentIDActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.AgentID.SerenAirAgentID.SerenAirAgentIDActivity;
 import com.nextSunTech.travelagentdashboard.R;
 
 import java.util.Objects;
@@ -25,6 +31,10 @@ public class AgentIDOfAirlinesActivity extends AppCompatActivity implements View
 
     NativeAd nativeAd;
     ImageView backIV;
+    CardView piaAgentIDBT;
+    CardView airBlueAgentIDBT;
+    CardView airSialAgentIDBT;
+    CardView sereneAirAgentIDBT;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,10 +43,16 @@ public class AgentIDOfAirlinesActivity extends AppCompatActivity implements View
 
 
         backIV = findViewById(R.id.iv_AgentIdAirlines_back);
-
+        piaAgentIDBT = findViewById(R.id.bt_AgentIDOfAirline_pia);
+        airBlueAgentIDBT = findViewById(R.id.bt_AgentIDOfAirline_airBlue);
+        airSialAgentIDBT = findViewById(R.id.bt_AgentIDOfAirline_airsial);
+        sereneAirAgentIDBT = findViewById(R.id.bt_AgentIDOfAirline_sereneAir);
 
         backIV.setOnClickListener(this);
-
+        piaAgentIDBT.setOnClickListener(this);
+        airBlueAgentIDBT.setOnClickListener(this);
+        airSialAgentIDBT.setOnClickListener(this);
+        sereneAirAgentIDBT.setOnClickListener(this);
         refreshAd();
     }
 
@@ -46,6 +62,26 @@ public class AgentIDOfAirlinesActivity extends AppCompatActivity implements View
 
             case R.id.iv_AgentIdAirlines_back:
                 finish();
+                break;
+
+            case R.id.bt_AgentIDOfAirline_pia:
+                Intent intent = new Intent(this, PIAAgentIDActivity.class);
+                startActivity(intent);
+                break;
+
+            case R.id.bt_AgentIDOfAirline_airBlue:
+                Intent intent1 = new Intent(this, AirBlueAgentIDActivity.class);
+                startActivity(intent1);
+                break;
+
+            case R.id.bt_AgentIDOfAirline_airsial:
+                Intent intent2 = new Intent(this, AirSialAgentIDActivity.class);
+                startActivity(intent2);
+                break;
+
+            case R.id.bt_AgentIDOfAirline_sereneAir:
+                Intent intent3 = new Intent(this, SerenAirAgentIDActivity.class);
+                startActivity(intent3);
                 break;
         }
     }

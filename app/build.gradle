@@ -8,11 +8,11 @@ android {
 
     defaultConfig {
         applicationId "com.nextSunTech.travelagentdashboard"
-        minSdkVersion 29
+        minSdkVersion 19
         targetSdkVersion 30
         multiDexEnabled true
         versionCode 2
-        versionName "2.0"
+        versionName "2.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

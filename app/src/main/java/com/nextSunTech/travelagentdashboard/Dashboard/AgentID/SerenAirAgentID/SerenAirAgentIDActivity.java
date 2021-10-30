@@ -1,4 +1,4 @@
-package com.nextSunTech.travelagentdashboard.Dashboard.AgentID.PIAAgentID;
+package com.nextSunTech.travelagentdashboard.Dashboard.AgentID.SerenAirAgentID;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ import android.widget.ProgressBar;
 
 import com.nextSunTech.travelagentdashboard.R;
 
-public class PIAAgentIDActivity extends AppCompatActivity implements View.OnClickListener {
+public class SerenAirAgentIDActivity extends AppCompatActivity implements View.OnClickListener {
 
     private WebView myWebView;
     private ProgressBar progressBar;
@@ -22,10 +22,10 @@ public class PIAAgentIDActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_p_i_a_agent_i_d);
+        setContentView(R.layout.activity_seren_air_agent_i_d);
 
 
-        backBT = findViewById(R.id.iv_PIAAgentID_back);
+        backBT = findViewById(R.id.iv_SereneAirAgentID_back);
 
 
         backBT.setOnClickListener(this);
@@ -36,7 +36,7 @@ public class PIAAgentIDActivity extends AppCompatActivity implements View.OnClic
         progressBar = findViewById(R.id.progressBar);
         progressBar.setMax(100);
         myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("https://crane.app/");
+        myWebView.loadUrl("https://www.sereneair.com/agents");
         WebSettings webSettings=myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         progressBar.setProgress(0);
@@ -71,7 +71,7 @@ public class PIAAgentIDActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()){
 
-            case R.id.iv_PIAAgentID_back:
+            case R.id.iv_SereneAirAgentID_back:
                 finish();
                 break;
         }

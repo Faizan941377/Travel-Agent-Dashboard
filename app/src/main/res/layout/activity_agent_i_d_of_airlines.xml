@@ -81,7 +81,7 @@
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cv_myBooking_pia"
+                            android:id="@+id/bt_AgentIDOfAirline_pia"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             app:cardBackgroundColor="@color/colorOffWhite"
@@ -124,7 +124,7 @@
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cv_myBooking_airBlue"
+                            android:id="@+id/bt_AgentIDOfAirline_airBlue"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             app:cardBackgroundColor="@color/colorOffWhite"
@@ -167,7 +167,7 @@
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cv_myBooking_airsial"
+                            android:id="@+id/bt_AgentIDOfAirline_airsial"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             app:cardBackgroundColor="@color/colorOffWhite"
@@ -210,7 +210,7 @@
                         android:orientation="horizontal">
 
                         <androidx.cardview.widget.CardView
-                            android:id="@+id/cv_myBooking_sereneAir"
+                            android:id="@+id/bt_AgentIDOfAirline_sereneAir"
                             android:layout_width="match_parent"
                             android:layout_height="80dp"
                             app:cardBackgroundColor="@color/colorOffWhite"

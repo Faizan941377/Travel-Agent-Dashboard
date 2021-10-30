@@ -1,4 +1,4 @@
-package com.nextSunTech.travelagentdashboard.Dashboard.AgentID.PIAAgentID;
+package com.nextSunTech.travelagentdashboard.Dashboard.AgentID.AirSialAgentID;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,7 +13,7 @@ import android.widget.ProgressBar;
 
 import com.nextSunTech.travelagentdashboard.R;
 
-public class PIAAgentIDActivity extends AppCompatActivity implements View.OnClickListener {
+public class AirSialAgentIDActivity extends AppCompatActivity implements View.OnClickListener {
 
     private WebView myWebView;
     private ProgressBar progressBar;
@@ -22,21 +22,20 @@ public class PIAAgentIDActivity extends AppCompatActivity implements View.OnClic
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_p_i_a_agent_i_d);
+        setContentView(R.layout.activity_air_sial_agent_i_d);
 
+        backBT = findViewById(R.id.iv_AirSialAgentID_back);
 
-        backBT = findViewById(R.id.iv_PIAAgentID_back);
 
 
         backBT.setOnClickListener(this);
-
 
 
         myWebView = findViewById(R.id.webview);
         progressBar = findViewById(R.id.progressBar);
         progressBar.setMax(100);
         myWebView.setWebViewClient(new WebViewClient());
-        myWebView.loadUrl("https://crane.app/");
+        myWebView.loadUrl("http://www.airsial.net/eticket/");
         WebSettings webSettings=myWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
         progressBar.setProgress(0);
@@ -71,7 +70,7 @@ public class PIAAgentIDActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         switch (v.getId()){
 
-            case R.id.iv_PIAAgentID_back:
+            case R.id.iv_AirSialAgentID_back:
                 finish();
                 break;
         }

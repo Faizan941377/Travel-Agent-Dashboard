@@ -32,7 +32,6 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 public class MyBookingActivity extends AppCompatActivity implements View.OnClickListener {
 
     private AdView mAdView;
-    private AdView mAdView2;
     ImageView backIV;
     CardView piaBT;
     CardView airBlueBT;
