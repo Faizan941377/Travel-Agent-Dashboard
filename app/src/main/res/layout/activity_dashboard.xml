@@ -366,6 +366,106 @@
                 </LinearLayout>
 
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/bt_dashboard_ViewTrip"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:cardBackgroundColor="@color/color_facebook"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/ico_dashboard_viewTrip"
+                                    android:layout_width="40dp"
+                                    android:layout_height="40dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/ico_view_trip"
+                                    android:backgroundTint="@color/colorWhite" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ico_dashboard_viewTrip"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="View Trip"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>
+
+                   <!-- <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/bt_dashboard_sabreRedWeb"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            app:cardBackgroundColor="@color/color_facebook"
+                            app:cardCornerRadius="10dp"
+                            app:cardElevation="4dp"
+                            app:cardUseCompatPadding="true">
+
+                            <RelativeLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center">
+
+                                <ImageView
+                                    android:id="@+id/ico_dashboard_sabre"
+                                    android:layout_width="45dp"
+                                    android:layout_height="45dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:background="@drawable/ico_sabre_red_web"
+                                    android:backgroundTint="@color/colorWhite" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/ico_dashboard_sabre"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="8dp"
+                                    android:gravity="center"
+                                    android:text="Sabre Red        Web"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14dp"
+                                    android:textStyle="bold" />
+
+                            </RelativeLayout>
+
+                        </androidx.cardview.widget.CardView>
+
+                    </LinearLayout>-->
+
+
+                </LinearLayout>
+
+
             </LinearLayout>
 
         </ScrollView>

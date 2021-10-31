@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.nextSunTech.travelagentdashboard">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,15 +12,32 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.TravelAgentDashboard">
-        <activity android:name=".Dashboard.AgentID.AirSialAgentID.AirSialAgentIDActivity"></activity>
-        <activity android:name=".Dashboard.AgentID.SerenAirAgentID.SerenAirAgentIDActivity" />
-        <activity android:name=".Dashboard.AgentID.AirBlueAgentID.AirBlueAgentIDActivity" />
-        <activity android:name=".Dashboard.AgentID.PIAAgentID.PIAAgentIDActivity" />
-        <activity android:name=".Dashboard.NADRACovidVaccineCertification.NadraCovidVaccineCertificateActivity" />
-        <activity android:name=".Dashboard.GamcaMedicalToken.GamcaMedicalTokenActivity" />
-        <activity android:name=".Dashboard.SabreRedWeb.SabreRedWebActivity" />
+        android:theme="@style/Theme.TravelAgentDashboard"
+        android:usesCleartextTraffic="true">
+
+        <activity android:name=".Dashboard.ViewTrip.ViewTripWebActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"></activity>
+        <activity
+            android:name=".Dashboard.AgentID.AirSialAgentID.AirSialAgentIDActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"></activity>
+        <activity
+            android:name=".Dashboard.AgentID.SerenAirAgentID.SerenAirAgentIDActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.AgentID.AirBlueAgentID.AirBlueAgentIDActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.AgentID.PIAAgentID.PIAAgentIDActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.NADRACovidVaccineCertification.NadraCovidVaccineCertificateActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.GamcaMedicalToken.GamcaMedicalTokenActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
+        <activity
+            android:name=".Dashboard.SabreRedWeb.SabreRedWebActivity"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".Dashboard.AgentID.AgentIDOfAirlinesActivity"
             android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />

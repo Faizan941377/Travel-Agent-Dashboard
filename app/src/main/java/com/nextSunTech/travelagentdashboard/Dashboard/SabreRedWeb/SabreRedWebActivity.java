@@ -26,8 +26,8 @@ public class SabreRedWebActivity extends AppCompatActivity implements View.OnCli
 
         backBT = findViewById(R.id.iv_SabreRedWeb_back);
 
-        backBT.setOnClickListener(this);
 
+        backBT.setOnClickListener(this);
 
         myWebView = findViewById(R.id.webview);
         progressBar = findViewById(R.id.progressBar);

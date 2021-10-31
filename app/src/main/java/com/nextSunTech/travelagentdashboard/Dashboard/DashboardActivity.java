@@ -13,6 +13,7 @@ import com.nextSunTech.travelagentdashboard.Dashboard.AgentID.AgentIDOfAirlinesA
 import com.nextSunTech.travelagentdashboard.Dashboard.GamcaMedicalToken.GamcaMedicalTokenActivity;
 import com.nextSunTech.travelagentdashboard.Dashboard.NADRACovidVaccineCertification.NadraCovidVaccineCertificateActivity;
 import com.nextSunTech.travelagentdashboard.Dashboard.SabreRedWeb.SabreRedWebActivity;
+import com.nextSunTech.travelagentdashboard.Dashboard.ViewTrip.ViewTripWebActivity;
 import com.nextSunTech.travelagentdashboard.ListOfCountries.ListOfCountriesActivity;
 import com.nextSunTech.travelagentdashboard.Dashboard.MyBookings.MyBookingActivity;
 import com.nextSunTech.travelagentdashboard.R;
@@ -31,6 +32,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
     CardView agentIDT;
     CardView nadraCovidVaccineCertificateBT;
     CardView sabreRedWebBT;
+    CardView viewTripBT;
 
 
     @Override
@@ -45,6 +47,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         gamcaMedicalTokenBT = findViewById(R.id.bt_dashboard_gamcaMedicalToken);
         nadraCovidVaccineCertificateBT = findViewById(R.id.bt_dashboard_NadraCovidVaccineCertificate);
         sabreRedWebBT = findViewById(R.id.bt_dashboard_sabreRedWeb);
+        viewTripBT = findViewById(R.id.bt_dashboard_ViewTrip);
 
 
         visaCheckBT.setOnClickListener(this);
@@ -53,6 +56,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         gamcaMedicalTokenBT.setOnClickListener(this);
         nadraCovidVaccineCertificateBT.setOnClickListener(this);
         sabreRedWebBT.setOnClickListener(this);
+        viewTripBT.setOnClickListener(this);
 
         BannerAdsDashboard();
     }
@@ -90,6 +94,11 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
             case R.id.bt_dashboard_sabreRedWeb:
                 Intent intent5 = new Intent(this, SabreRedWebActivity.class);
                 startActivity(intent5);
+                break;
+
+            case R.id.bt_dashboard_ViewTrip:
+                Intent intent6 = new Intent(this, ViewTripWebActivity.class);
+                startActivity(intent6);
                 break;
         }
     }
